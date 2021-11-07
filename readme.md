@@ -28,3 +28,5 @@ schedule('hourly', async () => {
   console.log('This is a job executing every hour.')
 })
 ```
+
+secondly, minutely, hourly, daily, monthly
