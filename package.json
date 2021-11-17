@@ -1,0 +1,45 @@
+{
+  "name": "cronu",
+  "version": "1.0.0",
+  "description": "Simple, Minimalistic Scheduler",
+  "main": "build/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "tsc -w",
+    "release:patch": "node minify.mjs && npm version patch && npm publish",
+    "release:minor": "node minify.mjs && npm version minor && npm publish",
+    "release:major": "node minify.mjs && npm version major && npm publish",
+    "test": "jest --detectOpenHandles"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://ko-fi.com/azury"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azurystudios/cronu.git"
+  },
+  "keywords": [
+    "cron",
+    "minimalistic",
+    "scheduler",
+    "easy-to-use",
+    "asynchronous"
+  ],
+  "author": "Azury <hello@azury.dev> (https://azury.dev)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/azurystudios/cronu/issues"
+  },
+  "homepage": "https://github.com/azurystudios/cronu#readme",
+  "devDependencies": {
+    "glob": "^7.2.0",
+    "jest": "^27.3.1",
+    "terser": "^5.10.0",
+    "typescript": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
