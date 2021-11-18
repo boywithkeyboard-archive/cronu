@@ -29,4 +29,10 @@ schedule('hourly', async () => {
 })
 ```
 
-secondly, minutely, hourly, daily, monthly
+### Intervals
+
+- `minutely`
+- `hourly`
+- `daily`
+- `weekly`
+- `monthly`
