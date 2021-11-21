@@ -27,6 +27,10 @@ import { schedule } from 'cronu'
 schedule('hourly', async () => {
   console.log('This is a job executing every hour.')
 })
+
+schedule('minutely', async (date) => {
+  console.log(`Fire Date: ${date}`)
+})
 ```
 
 ### Intervals
