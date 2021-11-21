@@ -2,7 +2,7 @@
 
 Simple, minimalistic scheduler, created by [Azury](https://azury.dev).
 
-#### Why should you use cachu?
+#### Why should you use cronu?
 
 - fully asynchronous
 - small n' easy
