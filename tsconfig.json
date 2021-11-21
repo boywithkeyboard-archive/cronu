@@ -4,6 +4,7 @@
     "module": "commonjs",
     "rootDir": "./src",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "declaration": true,
     "outDir": "./build",
     "declarationDir": "./types",
