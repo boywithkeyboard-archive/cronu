@@ -1,6 +1,6 @@
-src
-test
-.github
-changelog.md
-minify.mjs
+/src
+/test
+/.github
 tsconfig.json
+jest.config.js
+.gitignore
