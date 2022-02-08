@@ -1,6 +1,6 @@
 {
   "name": "cronu",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "⌛ Simple, Minimalistic Scheduler",
   "types": "./types/index.d.ts",
   "exports": "./build/index.js",

@@ -1,18 +1,12 @@
 # cronu
 
-Simple, minimalistic scheduler, created by [Azury](https://azury.dev).
-
-#### Why should you use cronu?
-
-- fully asynchronous
-- small n' easy
-- zero dependencies
+**Simple, minimalistic scheduler, created by [Azury](https://azury.dev).**
 
 ## Installation
 
 ### Install the Package
 
-Install it using your favorite package manager.
+Install **cronu** using your favorite package manager.
 
 ```sh-session
 npm i cronu
@@ -22,21 +16,13 @@ yarn add cronu
 ### Schedule a Job
 
 ```js
-import { schedule } from 'cronu'
+import schedule from 'cronu'
 
-schedule('hourly', async () => {
-  console.log('This is a job executing every hour.')
+const task = await schedule('1h', async ({ firedAt }) => {
+  console.log('A job running every hour.')
+  console.log(firedAt) // a date string in ISO format
 })
 
-schedule('minutely', async (date) => {
-  console.log(`Fire Date: ${date}`)
-})
+await task.pause()
+await task.resume()
 ```
-
-### Intervals
-
-- `minutely`
-- `hourly`
-- `daily`
-- `weekly`
-- `monthly`
