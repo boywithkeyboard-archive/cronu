@@ -1,13 +1,16 @@
-const { schedule } = require('../build/index.js')
+import schedule from '../build/index.js'
 
-test('invalid schedule', async () => {
-  expect(await schedule('invalid', async () => {
+test('schedule', async () => {
+  const task = await schedule('1h', async () => {
     console.log('Hello World')
-  })).toBe(false)
-})
+  })
 
-test('minutely date', async () => {
-  expect(await schedule('minutely', async (date) => {
-    console.log(date)
-  })).toBe(true)
+  expect(task).toEqual(
+    expect.objectContaining({
+      pause: expect.any(Function),
+      resume: expect.any(Function)
+    })
+  )
+
+  await task.pause()
 })
